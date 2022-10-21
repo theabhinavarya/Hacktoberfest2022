@@ -1,0 +1,177 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.container{
+  margin-left: 5px;
+  width: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items:  center;
+}
+.overlay-content{
+  margin: 0;
+  padding: 0;
+  background-color:rgb(0, 0, 0); 
+  height: 67px;
+}
+.logo{
+  width: 50px;
+}
+.abhi{
+  margin-left: 10px;
+}
+
+.closebtn{
+  display: none;
+}
+.shows{
+  width: 110px;
+}
+.btn{
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  cursor: pointer; 
+height: 60px;
+width: 150px;
+}
+.btn:hover{
+  background-color: whitesmoke;
+}
+.menu-icon{
+  width: 50px;
+  cursor: pointer;
+  display: none;
+}
+.search-box{
+  position: absolute;
+  top: 50px;
+  left: 70%;
+  transform: translate(-50%,-50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px; 
+}
+.search-box:hover>.search-txt{
+  width: 240px;
+  padding: 0 6px; 
+}
+.search-box:hover>.search-btn{
+  background: white;
+
+}
+.search-btn{
+  color: #e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width:  0px;
+}
+#mySearch{
+  display: none;
+}
+@media only screen and (max-width: 700px) {
+
+.abhi{
+  margin-left: 0px;
+  font-size: 30px;
+}
+.menu-icon{
+  display: block;
+  width: 40px;
+}
+.logo{
+  top: 0px;
+  margin: 2px;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+ #menuList{
+      overflow: hidden;
+      transition: 0.5s;
+    }
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 0px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+.btn{
+  width: 100%;
+}
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+}
+span{
+  top: 0px;
+  right: 0px;
+  position: relative;
+}
+.search-box{
+  display: none;
+}
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  text-align: start;
+  color: white;
+  display: block;
+}
+
+}
